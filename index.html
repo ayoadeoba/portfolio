@@ -676,44 +676,20 @@
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Send a Direct Message</h3>
                         <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">Fill out the form below or schedule a brief 10-minute video conversation.</p>
 
-                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Your Full Name</label>
-                                <input type="text" required placeholder="e.g. Pastor David Smith" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
-                            </div>
+                        <form action="https://formspree.io/f/xqpzdovy" method="POST">
+  
+  <!-- CRITICAL: Every input box MUST have a "name" attribute so the backend knows what data it is reading -->
+  <label>Your Name</label>
+  <input type="text" name="name" required>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
-                                    <input type="email" required placeholder="dsmith@church.org" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Organization / Church</label>
-                                    <input type="text" placeholder="Global Missions Network" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
-                                </div>
-                            </div>
+  <label>Your Email Address</label>
+  <input type="email" name="email" required>
 
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Topic / Area of Collaboration</label>
-                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
-                                    <option>Cross-Cultural Ministry & Discipleship</option>
-                                    <option>Livestream Setup & Video Post-Production</option>
-                                    <option>WordPress Web & E-Library Architecture</option>
-                                    <option>Digital Email Campaigns & Analytics</option>
-                                    <option>General Strategic Inquiry</option>
-                                </select>
-                            </div>
+  <label>Your Message</label>
+  <textarea name="message" required></textarea>
 
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Your Message</label>
-                                <textarea rows="4" required placeholder="Share brief details regarding your ministry needs or collaboration proposal..." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition"></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full bg-gradient-to-r from-brand-600 to-gold-600 text-white font-bold py-3.5 rounded-xl shadow-md hover:opacity-95 transition text-xs uppercase tracking-wider flex items-center justify-center gap-2">
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Send Message</span>
-                            </button>
-                        </form>
+  <button type="submit">Send Message</button>
+</form>
 
                         <div id="form-success" class="hidden mt-4 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-center text-emerald-600 dark:text-emerald-400 text-xs font-bold">
                             <i class="fas fa-circle-check text-base mr-1"></i> Thank you! Your message has been sent. Ayomide will respond shortly.
