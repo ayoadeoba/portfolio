@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayomide Adeoba | Cross-Cultural Ministry & Digital Media Coordinator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-navy-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col selection:bg-gold-500 selection:text-white">
+
+    <!-- Top Alert Banner for Fall 2026 Expansion -->
+    <div class="bg-gradient-to-r from-navy-900 via-brand-900 to-navy-900 text-slate-200 text-xs sm:text-sm py-2 px-4 text-center border-b border-slate-700/50 flex justify-center items-center gap-2">
+        <span class="bg-gold-500/20 text-gold-400 text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full border border-gold-500/30">FALL 2026</span>
+        <span>Preparing for Theological & Practical Ministry Expansion in the United States</span>
+        <button onclick="switchTab('contact')" class="underline hover:text-gold-400 ml-2 font-medium transition">Connect for Partnership &rarr;</button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-nav bg-white/80 dark:bg-navy-900/80 border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Name -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('home')">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-gold-500 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-brand-500/20">
+                        AA
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg text-slate-900 dark:text-white tracking-tight block leading-none">Ayomide Adeoba</span>
+                        <span class="text-xs text-brand-600 dark:text-gold-400 font-medium tracking-wide">Missions & Digital Media</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-1 lg:space-x-2">
+                    <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-gold-400 hover:bg-slate-100 dark:hover:bg-slate-800/60">Home</button>
+                    <button onclick="switchTab('about')" id="nav-about" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-gold-400 hover:bg-slate-100 dark:hover:bg-slate-800/60">About</button>
+                    <button onclick="switchTab('services')" id="nav-services" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-gold-400 hover:bg-slate-100 dark:hover:bg-slate-800/60">Services</button>
+                    <button onclick="switchTab('portfolio')" id="nav-portfolio" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-gold-400 hover:bg-slate-100 dark:hover:bg-slate-800/60">Portfolio</button>
+                    <button onclick="switchTab('contact')" id="nav-contact" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-gold-400 hover:bg-slate-100 dark:hover:bg-slate-800/60">Contact</button>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="hidden md:flex items-center gap-3">
+                    <!-- Theme Toggle -->
+                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Toggle Theme">
+                        <i id="theme-icon" class="fas fa-moon text-lg"></i>
+                    </button>
+                    <!-- CTA Button -->
+                    <button onclick="openScheduleModal()" class="bg-gradient-to-r from-brand-600 to-gold-600 hover:from-brand-700 hover:to-gold-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-brand-500/20 hover:shadow-gold-500/30 transition duration-300 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Let's Connect</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu & Theme Toggle -->
+                <div class="flex items-center gap-2 md:hidden">
+                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i id="theme-icon-mobile" class="fas fa-moon text-base"></i>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
+                        <i id="mobile-menu-icon" class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-navy-900 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+            <button onclick="switchTab('home'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</button>
+            <button onclick="switchTab('about'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About</button>
+            <button onclick="switchTab('services'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Services</button>
+            <button onclick="switchTab('portfolio'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Portfolio</button>
+            <button onclick="switchTab('contact'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</button>
+            <div class="pt-2">
+                <button onclick="openScheduleModal(); toggleMobileMenu();" class="w-full bg-gradient-to-r from-brand-600 to-gold-600 text-white text-center py-3 rounded-xl font-semibold shadow-md flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Schedule 10-Min Conversation</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- ========================================== -->
+        <!-- SECTION: HOME                              -->
+        <!-- ========================================== -->
+        <section id="section-home" class="tab-content transition-opacity duration-300">
+            <!-- Hero Section -->
+            <div class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-navy-900 to-slate-900 text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+                <!-- Background Subtle Glow Effect -->
+                <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute bottom-10 right-10 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="max-w-5xl mx-auto text-center relative z-10">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-gold-400 text-xs sm:text-sm font-semibold mb-6 shadow-inner">
+                        <i class="fas fa-globe-africa text-brand-400"></i>
+                        <span>8+ Years Cross-Cultural Ministry & Digital Media Leadership</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                        Bridging Global Missions & <br class="hidden sm:inline">
+                        <span class="gold-gradient-text">Strategic Digital Media</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+                        Elevating multicultural ministry impact through 8+ years of proven experience in cross-cultural communication, digital discipleship, and full-scale multimedia production.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button onclick="switchTab('contact')" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 transition duration-300 flex items-center justify-center gap-3">
+                            <span>Let's Connect</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
+                        <button onclick="switchTab('portfolio')" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white font-semibold px-8 py-4 rounded-xl border border-slate-700 transition duration-300 flex items-center justify-center gap-2">
+                            <i class="fas fa-laptop-code text-brand-400"></i>
+                            <span>Explore Portfolio</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Achievements Banner -->
+            <div class="bg-gradient-to-r from-brand-900 via-navy-900 to-brand-900 py-12 border-b border-slate-800 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p class="text-center text-xs font-semibold uppercase tracking-widest text-gold-400 mb-8">Verified Impact Metrics & Milestones</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                        <!-- Achievement 1 -->
+                        <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-6 hover:border-gold-500/50 transition duration-300">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl font-bold">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span class="text-3xl font-extrabold text-white">+120%</span>
+                            </div>
+                            <h3 class="font-semibold text-slate-200 text-sm mb-1">Digital Engagement Surge</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Increase in digital platform engagement for the Nigeria Evangelical Missionary Institute (NEMI) within 9 months.
+                            </p>
+                        </div>
+
+                        <!-- Achievement 2 -->
+                        <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-6 hover:border-brand-500/50 transition duration-300">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-xl font-bold">
+                                    <i class="fas fa-book-bookmark"></i>
+                                </div>
+                                <span class="text-3xl font-extrabold text-white">300+</span>
+                            </div>
+                            <h3 class="font-semibold text-slate-200 text-sm mb-1">Sermon E-Library</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Sermon articles transcribed, collated, and categorized into a searchable, accessible digital library.
+                            </p>
+                        </div>
+
+                        <!-- Achievement 3 -->
+                        <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-2xl p-6 hover:border-emerald-500/50 transition duration-300">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold">
+                                    <i class="fas fa-users-rectangle"></i>
+                                </div>
+                                <span class="text-3xl font-extrabold text-white">500+</span>
+                            </div>
+                            <h3 class="font-semibold text-slate-200 text-sm mb-1">Global Contacts Managed</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Mission partners & donors engaged via structured digital email campaigns & quarterly reports.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Value Proposition Grid -->
+            <div class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-gold-400 mb-2">Core Pillars of Expertise</h2>
+                    <p class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Empowering the Body of Christ Through Digital & Ground Strategy</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Column 1 -->
+                    <div class="bg-white dark:bg-navy-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                                <i class="fas fa-hands-holding-circle"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Cross-Cultural Ministry</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                Deep grounding in missions mobilization, church logistics, and navigating multiethnic contexts across local and international settings. Certified cross-cultural minister.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 border-t border-slate-100 dark:border-slate-800 pt-4">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-500"></i> Field Missions Mobilization</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-500"></i> Multiethnic Context Logistics</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-500"></i> Pastoral & Community Engagement</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="bg-white dark:bg-navy-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-gold-50 dark:bg-gold-900/40 text-gold-600 dark:text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                                <i class="fas fa-laptop-house"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Digital Discipleship</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                Utilizing modern communication tools, social strategy, and structured email networks to construct global online prayer rooms and remote training environments.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 border-t border-slate-100 dark:border-slate-800 pt-4">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> Virtual Prayer Networks</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> Digital Classroom Delivery</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> Email & Newsletter Campaigns</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="bg-white dark:bg-navy-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                                <i class="fas fa-photo-film"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Multimedia & IT Production</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                Full-scale video editing, livestream system setups (vMix/Easyworship), graphic design, and WordPress/Elementor web UI optimization tailored for church broadcasts.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 border-t border-slate-100 dark:border-slate-800 pt-4">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500"></i> CapCut / Clipchamp Video Editing</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500"></i> vMix & Livestream Architecture</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500"></i> WordPress & Elementor UI Layouts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Closing Section Call to Action -->
+            <div class="bg-slate-100 dark:bg-navy-900/60 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800">
+                <div class="max-w-4xl mx-auto text-center">
+                    <span class="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300 text-xs font-bold rounded-full mb-4">
+                        LOOKING FORWARD TO FALL 2026
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                        Bridging African Field Experience with US Ministry Vision
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl mx-auto">
+                        As I prepare for upcoming theological and practical ministry training in the United States in Fall 2026, I am actively seeking strategic partnerships, media internships, and collaborative opportunities with Western churches and mission agencies.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <button onclick="switchTab('about')" class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition">
+                            Read Full Journey
+                        </button>
+                        <button onclick="switchTab('contact')" class="bg-gold-500 hover:bg-gold-600 text-slate-950 font-bold px-6 py-3 rounded-xl shadow-md transition">
+                            Start Partnership Conversation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION: ABOUT                             -->
+        <!-- ========================================== -->
+        <section id="section-about" class="tab-content hidden transition-opacity duration-300">
+            <div class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-gold-400">Bio & Calling</span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
+                        Driven by the Gospel, Equipped for the Global Church
+                    </h1>
+                </div>
+
+                <!-- Main Narrative & Callout -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+                    <div class="lg:col-span-8 bg-white dark:bg-navy-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-6 text-slate-700 dark:text-slate-300 text-base leading-relaxed">
+                        <p class="font-medium text-lg text-slate-900 dark:text-white leading-snug">
+                            "For nearly a decade, I have served as a cross-cultural minister, digital media coordinator, and missions mobilizer in Nigeria."
+                        </p>
+                        <p>
+                            My journey began with a clear calling to serve the body of Christ, which led me to blend my foundational technical analytical background with practical, field-tested theological training.
+                        </p>
+                        <p>
+                            I hold a <strong>Certificate in Cross-Cultural Ministry from the Nigeria Evangelical Missionary Institute (NEMI)</strong>, where I specialized in cross-cultural communication and digital classroom delivery. This training, combined with extensive fieldwork across various regions, has given me firsthand insights into local church dynamics, strategic media integration, and multiethnic community engagement.
+                        </p>
+                        <p>
+                            As I prepare to expand my ministerial training in the United States for <strong>Fall 2026</strong>, my ultimate vision is to act as a strategic partner to Western ministries seeking to meaningfully connect with rapidly changing, multicultural local and global populations.
+                        </p>
+                    </div>
+
+                    <!-- Sidebar Stats Card -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <div class="bg-gradient-to-br from-navy-900 to-slate-900 text-white p-6 rounded-2xl border border-slate-800 shadow-lg">
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-gold-400 mb-4">Credentials & Education</h3>
+                            <ul class="space-y-4 text-xs">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-graduation-cap text-gold-400 mt-1"></i>
+                                    <div>
+                                        <div class="font-bold text-slate-100">Certificate in Cross-Cultural Ministry</div>
+                                        <div class="text-slate-400">Nigeria Evangelical Missionary Institute (NEMI)</div>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-bullseye text-gold-400 mt-1"></i>
+                                    <div>
+                                        <div class="font-bold text-slate-100">Specialization</div>
+                                        <div class="text-slate-400">Digital Classroom Delivery & Cross-Cultural Communication</div>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-plane-departure text-gold-400 mt-1"></i>
+                                    <div>
+                                        <div class="font-bold text-slate-100">Fall 2026 Objective</div>
+                                        <div class="text-slate-400">US Theological Training & International Media Support</div>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-location-dot text-gold-400 mt-1"></i>
+                                    <div>
+                                        <div class="font-bold text-slate-100">Current Base</div>
+                                        <div class="text-slate-400">Ibadan, Nigeria (Open to Relocation)</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gold-500/10 border border-gold-500/30 p-6 rounded-2xl">
+                            <h4 class="font-bold text-slate-900 dark:text-gold-400 text-sm mb-2 flex items-center gap-2">
+                                <i class="fas fa-lightbulb"></i> Philosophy of Ministry
+                            </h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                Technology is not a substitute for the Holy Spirit, but a digital bridge to gather nations, archive divine truth, and amplify the Gospel beyond geographic borders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline / Career Journey -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8 text-center">Ministry & Media Journey Timeline</h2>
+                    <div class="relative border-l-2 border-brand-500/30 ml-4 md:ml-32 space-y-8">
+                        
+                        <!-- Timeline Item 1 -->
+                        <div class="relative pl-6 md:pl-8">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gold-500 border-4 border-white dark:border-navy-950"></div>
+                            <span class="text-xs font-bold text-brand-600 dark:text-gold-400">2026 & Beyond</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">US Transition & Global Partnerships</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
+                                Preparing for theological and practical ministry training in the United States while serving Western and multicultural international churches as a digital media strategist.
+                            </p>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="relative pl-6 md:pl-8">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-white dark:border-navy-950"></div>
+                            <span class="text-xs font-bold text-brand-600 dark:text-gold-400">2021 – Present</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">Digital Media & Mobilization Coordinator (NEMI)</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
+                                Spearheaded digital outreach resulting in a 120% engagement boost. Developed a searchable 300+ sermon e-library, structured quarterly news distributions to 500+ contacts, and managed streaming operations.
+                            </p>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="relative pl-6 md:pl-8">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white dark:border-navy-950"></div>
+                            <span class="text-xs font-bold text-brand-600 dark:text-gold-400">2016 – 2021</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">Cross-Cultural Field Mobilization & Technical Operations</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
+                                Coordinated missions trips, managed local church sound and visual systems, built digital prayer networks, and facilitated remote training environments for students across Nigeria.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION: SERVICES                          -->
+        <!-- ========================================== -->
+        <section id="section-services" class="tab-content hidden transition-opacity duration-300">
+            <div class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-gold-400">Core Capabilities</span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
+                        Strategic Digital & Ministry Solutions
+                    </h1>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-4">
+                        Customized service solutions designed to help Christian organizations, churches, and mission agencies expand their reach, structure their communication, and optimize technical operations.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white dark:bg-navy-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/50 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                            Missions Mobilization & Discipleship Strategy
+                        </h2>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            Structuring multiethnic ministry outreach, facilitating remote communication tools for small groups, and coordinating cross-cultural student engagement programs.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold-500"></i> Remote Prayer Group Architectures</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold-500"></i> Cross-Cultural Student Onboarding</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold-500"></i> Multiethnic Outreach Workflows</li>
+                        </ul>
+                        <button onclick="openInquiryModal('Missions Mobilization')" class="text-xs font-bold text-brand-600 dark:text-gold-400 hover:underline inline-flex items-center gap-1">
+                            <span>Request Strategic Consultation</span> <i class="fas fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white dark:bg-navy-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition">
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                            Multimedia Production & Technical Operations
+                        </h2>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            High-quality video editing (CapCut, Clipchamp), professional church streaming setup (vMix, Easyworship), and sermon library transcription architecture.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-purple-500"></i> vMix & Easyworship Livestream Configurations</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-purple-500"></i> Audio/Sermon Transcription & Cataloging</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-purple-500"></i> CapCut / Clipchamp Video Post-Production</li>
+                        </ul>
+                        <button onclick="openInquiryModal('Multimedia Production')" class="text-xs font-bold text-brand-600 dark:text-gold-400 hover:underline inline-flex items-center gap-1">
+                            <span>Request Technical Assessment</span> <i class="fas fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white dark:bg-navy-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition">
+                        <div class="w-12 h-12 rounded-xl bg-gold-50 dark:bg-gold-900/50 text-gold-600 dark:text-gold-400 flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                            Web & UI/UX Optimization
+                        </h2>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            WordPress website design, Elementor layout creation, and targeted UI enhancements for streaming and social media channels to rapidly build audience engagement.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-brand-500"></i> Custom WordPress / Elementor Sites</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-brand-500"></i> Streaming UI & Navigation Optimization</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-brand-500"></i> Mobile Responsive Layout Upgrades</li>
+                        </ul>
+                        <button onclick="openInquiryModal('Web & UI/UX Optimization')" class="text-xs font-bold text-brand-600 dark:text-gold-400 hover:underline inline-flex items-center gap-1">
+                            <span>Inquire Web Redesign</span> <i class="fas fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white dark:bg-navy-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                            Digital Marketing & Campaign Analytics
+                        </h2>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            Executing SEO content optimization, designing professional templates for quarterly reports and annual newsletters, and managing digital email communication networks.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-500"></i> Donor & Partner Email Newsletter Systems</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-500"></i> SEO & Content Strategy</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-500"></i> Quarterly Ministry Analytics Reporting</li>
+                        </ul>
+                        <button onclick="openInquiryModal('Digital Marketing & Analytics')" class="text-xs font-bold text-brand-600 dark:text-gold-400 hover:underline inline-flex items-center gap-1">
+                            <span>Discuss Campaign Strategy</span> <i class="fas fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION: PORTFOLIO                         -->
+        <!-- ========================================== -->
+        <section id="section-portfolio" class="tab-content hidden transition-opacity duration-300">
+            <div class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-gold-400">Demonstrated Results</span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
+                        Digital Assets & Production Showcase
+                    </h1>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-4">
+                        Explore interactive demos, live systems, newsletter templates, and media projects built for cross-cultural ministry impact.
+                    </p>
+                </div>
+
+                <!-- Interactive Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 mb-10">
+                    <button onclick="filterPortfolio('all')" class="port-filter-btn active-filter bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-semibold transition" data-filter="all">All Projects</button>
+                    <button onclick="filterPortfolio('library')" class="port-filter-btn bg-white dark:bg-navy-900 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-800 transition hover:border-brand-500" data-filter="library">Sermon E-Library (Live Demo)</button>
+                    <button onclick="filterPortfolio('tech')" class="port-filter-btn bg-white dark:bg-navy-900 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-800 transition hover:border-brand-500" data-filter="tech">Livestream & Video Tech</button>
+                    <button onclick="filterPortfolio('campaign')" class="port-filter-btn bg-white dark:bg-navy-900 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-800 transition hover:border-brand-500" data-filter="campaign">Email & Analytics</button>
+                </div>
+
+                <!-- FEATURED INTERACTIVE DEMO: Searchable Sermon E-Library Collection -->
+                <div class="port-item mb-12 bg-white dark:bg-navy-900 rounded-3xl p-6 sm:p-8 border border-brand-500/30 shadow-xl" data-category="library">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 border-b border-slate-200 dark:border-slate-800 pb-6">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 text-gold-500 text-xs font-bold mb-2">
+                                <i class="fas fa-star"></i> Interactive Live Prototype
+                            </div>
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
+                                300+ Sermon Articles Searchable E-Library
+                            </h2>
+                            <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
+                                Test the live cataloging system engineered for NEMI. Search by keyword or filter by category below.
+                            </p>
+                        </div>
+                        <div class="text-right hidden md:block">
+                            <span class="text-xs text-slate-500">System Architecture</span>
+                            <div class="text-xs font-semibold text-brand-600 dark:text-gold-400">Indexed DB / WordPress Custom Post Types</div>
+                        </div>
+                    </div>
+
+                    <!-- Search Box -->
+                    <div class="relative max-w-md mb-6">
+                        <i class="fas fa-search absolute left-4 top-3.5 text-slate-400 text-sm"></i>
+                        <input type="text" id="library-search" onkeyup="searchSermons()" placeholder="Search sermons by title, topic, or scripture (e.g. Prayer, Missions, Faith)..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
+                    </div>
+
+                    <!-- Live Sample Cards Grid -->
+                    <div id="sermon-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Sermon Item 1 -->
+                        <div class="sermon-card p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-gold-500/50 transition" data-tags="missions cross-cultural mobilizer great commission">
+                            <span class="text-[10px] font-bold text-brand-600 dark:text-gold-400 bg-brand-50 dark:bg-brand-900/40 px-2 py-0.5 rounded">Missions</span>
+                            <h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 mt-2 mb-1">Cross-Cultural Mobilization in Modern Africa</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">Key principles on how to train indigenous missionaries for cross-cultural impact.</p>
+                            <div class="mt-3 flex justify-between items-center text-[10px] text-slate-400">
+                                <span><i class="fas fa-book-open"></i> Matthew 28:19</span>
+                                <span class="text-brand-500 font-semibold cursor-pointer" onclick="viewSermonModal('Cross-Cultural Mobilization in Modern Africa', 'Matthew 28:19', 'Missions', 'This sermon breakdown focuses on practical methodologies for preparing church leaders to engage non-reached multiethnic regions, highlighting cross-cultural adaptability and digital tools.')">Read Brief &rarr;</span>
+                            </div>
+                        </div>
+
+                        <!-- Sermon Item 2 -->
+                        <div class="sermon-card p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-gold-500/50 transition" data-tags="prayer global intercession online discipleship">
+                            <span class="text-[10px] font-bold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/40 px-2 py-0.5 rounded">Prayer & Faith</span>
+                            <h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 mt-2 mb-1">Building Virtual Global Prayer Networks</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">How digital tools facilitate 24/7 continuous prayer rooms across timezones.</p>
+                            <div class="mt-3 flex justify-between items-center text-[10px] text-slate-400">
+                                <span><i class="fas fa-book-open"></i> 1 Thessalonians 5:17</span>
+                                <span class="text-brand-500 font-semibold cursor-pointer" onclick="viewSermonModal('Building Virtual Global Prayer Networks', '1 Thessalonians 5:17', 'Prayer & Faith', 'Examines the technological infrastructure used to sustain multi-country prayer vigils, combining email reminders, messaging groups, and video rooms.')">Read Brief &rarr;</span>
+                            </div>
+                        </div>
+
+                        <!-- Sermon Item 3 -->
+                        <div class="sermon-card p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-gold-500/50 transition" data-tags="discipleship digital youth technology leadership">
+                            <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/40 px-2 py-0.5 rounded">Digital Discipleship</span>
+                            <h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 mt-2 mb-1">Digital Media as a Discipleship Catalyst</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">Leveraging short-form video and structured archives to nurture young believers.</p>
+                            <div class="mt-3 flex justify-between items-center text-[10px] text-slate-400">
+                                <span><i class="fas fa-book-open"></i> 2 Timothy 2:2</span>
+                                <span class="text-brand-500 font-semibold cursor-pointer" onclick="viewSermonModal('Digital Media as a Discipleship Catalyst', '2 Timothy 2:2', 'Digital Discipleship', 'Focuses on transforming passive video consumption into active discipleship pathways, using interactive quizzes and structured audio transcriptions.')">Read Brief &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid of Other Portfolio Showcase Projects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project Item: NEMI Platform Growth Case Study -->
+                    <div class="port-item bg-white dark:bg-navy-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm" data-category="campaign">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-gold-500 uppercase tracking-wide">Case Study</span>
+                                <span class="text-[10px] bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-500">Analytics & Marketing</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                                NEMI 120% Engagement Growth Campaign
+                            </h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                Optimized digital distribution channels and re-architected content layouts for the Nigeria Evangelical Missionary Institute, driving double-digit engagement growth within 9 months.
+                            </p>
+                            <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4 text-xs">
+                                <span class="font-semibold text-slate-500">Key Metric: <span class="text-emerald-500">+120% Engagement</span></span>
+                                <button onclick="openCaseStudyModal()" class="text-brand-600 dark:text-gold-400 font-bold hover:underline">View Strategy &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Item: Livestream & Technical Setup Blueprint -->
+                    <div class="port-item bg-white dark:bg-navy-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm" data-category="tech">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-purple-500 uppercase tracking-wide">Tech Stack Blueprint</span>
+                                <span class="text-[10px] bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-500">vMix / Easyworship</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                                Multi-Camera Church Streaming Setup
+                            </h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                Configured low-latency vMix video routing, audio mixing consoles, and Easyworship projection software integration for seamless hybrid church services.
+                            </p>
+                            <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4 text-xs">
+                                <span class="font-semibold text-slate-500">Tools: CapCut, Clipchamp, vMix</span>
+                                <button onclick="openTechBlueprintModal()" class="text-brand-600 dark:text-gold-400 font-bold hover:underline">View Technical Diagram &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION: CONTACT                           -->
+        <!-- ========================================== -->
+        <section id="section-contact" class="tab-content hidden transition-opacity duration-300">
+            <div class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-gold-400">Get In Touch</span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
+                        Let's Advance the Global Mission Together
+                    </h1>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-4">
+                        Whether you are looking to enhance your church’s weekly live streaming setup, build global missions engagement, or explore international media support collaborations, I would love to connect.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Contact Cards (Left) -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <!-- Card 1: Email -->
+                        <div class="bg-white dark:bg-navy-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-gold-500/40 transition">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">Direct Email</span>
+                                    <a href="mailto:ayomide.adeoba.a@gmail.com" class="font-bold text-sm text-slate-900 dark:text-slate-100 hover:text-brand-600 dark:hover:text-gold-400 transition">ayomide.adeoba.a@gmail.com</a>
+                                </div>
+                            </div>
+                            <button onclick="copyToClipboard('ayomide.adeoba.a@gmail.com', this)" class="mt-3 text-[11px] font-semibold text-slate-500 hover:text-brand-600 dark:hover:text-gold-400 flex items-center gap-1">
+                                <i class="fas fa-copy text-[10px]"></i> <span>Copy Email Address</span>
+                            </button>
+                        </div>
+
+                        <!-- Card 2: Phone / WhatsApp -->
+                        <div class="bg-white dark:bg-navy-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-gold-500/40 transition">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">Phone / WhatsApp</span>
+                                    <a href="https://wa.me/2348100700765" target="_blank" class="font-bold text-sm text-slate-900 dark:text-slate-100 hover:text-emerald-600 transition">+234 810 070 0765</a>
+                                </div>
+                            </div>
+                            <button onclick="copyToClipboard('+2348100700765', this)" class="mt-3 text-[11px] font-semibold text-slate-500 hover:text-emerald-600 flex items-center gap-1">
+                                <i class="fas fa-copy text-[10px]"></i> <span>Copy Phone Number</span>
+                            </button>
+                        </div>
+
+                        <!-- Card 3: Location -->
+                        <div class="bg-white dark:bg-navy-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">Current Location</span>
+                                    <div class="font-bold text-sm text-slate-900 dark:text-slate-100">Ibadan, Nigeria</div>
+                                    <span class="text-[11px] text-gold-600 dark:text-gold-400 font-medium">(Open to US Relocation / International)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: LinkedIn -->
+                        <div class="bg-white dark:bg-navy-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">LinkedIn Profile</span>
+                                    <a href="https://linkedin.com/in/ayoadeoba6" target="_blank" class="font-bold text-sm text-slate-900 dark:text-slate-100 hover:text-blue-600 transition">linkedin.com/in/ayoadeoba6</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Right) -->
+                    <div class="lg:col-span-7 bg-white dark:bg-navy-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Send a Direct Message</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">Fill out the form below or schedule a brief 10-minute video conversation.</p>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Your Full Name</label>
+                                <input type="text" required placeholder="e.g. Pastor David Smith" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+                                    <input type="email" required placeholder="dsmith@church.org" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Organization / Church</label>
+                                    <input type="text" placeholder="Global Missions Network" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Topic / Area of Collaboration</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition">
+                                    <option>Fall 2026 US Ministry & Internship Opportunities</option>
+                                    <option>Missions Mobilization & Discipleship</option>
+                                    <option>Livestream Setup & Video Post-Production</option>
+                                    <option>WordPress Web & E-Library Architecture</option>
+                                    <option>General Strategic Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Your Message</label>
+                                <textarea rows="4" required placeholder="Share brief details regarding your ministry needs or collaboration proposal..." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-brand-500 transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-brand-600 to-gold-600 text-white font-bold py-3.5 rounded-xl shadow-md hover:opacity-95 transition text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+
+                        <div id="form-success" class="hidden mt-4 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-center text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+                            <i class="fas fa-circle-check text-base mr-1"></i> Thank you! Your message has been sent. Ayomide will respond shortly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL: 10-Min Call Scheduler -->
+    <div id="schedule-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-navy-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl relative">
+            <button onclick="closeScheduleModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-500 mx-auto flex items-center justify-center text-xl mb-3">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Schedule a 10-Minute Call</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Let's connect for a brief introductory video chat to discuss potential ministry partnership.</p>
+            </div>
+
+            <form onsubmit="handleScheduleSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Your Name</label>
+                    <input type="text" required placeholder="Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Preferred Date</label>
+                    <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Preferred Time Zone / Slot</label>
+                    <select class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 text-xs">
+                        <option>Morning (EST / GMT-5)</option>
+                        <option>Afternoon (EST / GMT-5)</option>
+                        <option>West Africa Time (GMT+1)</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-slate-950 font-bold py-3 rounded-xl shadow transition text-xs uppercase tracking-wider">
+                    Confirm Video Slot Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: Generic Details Popup -->
+    <div id="details-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-navy-900 rounded-3xl max-w-xl w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl relative">
+            <button onclick="closeDetailsModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <h3 id="modal-title" class="text-xl font-bold text-slate-900 dark:text-white mb-2"></h3>
+            <div id="modal-subtitle" class="text-xs font-semibold text-gold-500 mb-4"></div>
+            <p id="modal-body" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6"></p>
+            <button onclick="closeDetailsModal()" class="w-full bg-slate-800 text-white font-bold py-2.5 rounded-xl text-xs">Close Overview</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-slate-800 text-slate-400 py-12 px-4 sm:px-6 lg:px-8 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gold-500 text-slate-950 font-bold flex items-center justify-center text-sm">
+                    AA
+                </div>
+                <div>
+                    <span class="text-sm font-bold text-white block">Ayomide Adeoba</span>
+                    <span class="text-[11px] text-slate-500">Missions Mobilization & Digital Media Strategy</span>
+                </div>
+            </div>
+
+            <div class="flex gap-6 text-xs text-slate-400">
+                <button onclick="switchTab('home')" class="hover:text-gold-400 transition">Home</button>
+                <button onclick="switchTab('about')" class="hover:text-gold-400 transition">About</button>
+                <button onclick="switchTab('services')" class="hover:text-gold-400 transition">Services</button>
+                <button onclick="switchTab('portfolio')" class="hover:text-gold-400 transition">Portfolio</button>
+                <button onclick="switchTab('contact')" class="hover:text-gold-400 transition">Contact</button>
+            </div>
+
+            <div class="flex items-center gap-4 text-base text-slate-300">
+                <a href="mailto:ayomide.adeoba.a@gmail.com" class="hover:text-gold-400 transition" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/2348100700765" target="_blank" class="hover:text-emerald-400 transition" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://linkedin.com/in/ayoadeoba6" target="_blank" class="hover:text-blue-400 transition" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-slate-800/60 text-center text-[11px] text-slate-500">
+            &copy; 2026 Ayomide Adeoba. All rights reserved. Prepared for Fall 2026 International Ministry & Theological Expansion.
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching logic
+        function switchTab(tabId) {
+            const tabs = ['home', 'about', 'services', 'portfolio', 'contact'];
+            tabs.forEach(id => {
+                const section = document.getElementById(`section-${id}`);
+                const navBtn = document.getElementById(`nav-${id}`);
+                if (id === tabId) {
+                    section.classList.remove('hidden');
+                    if (navBtn) {
+                        navBtn.classList.add('bg-brand-500/10', 'text-brand-600', 'dark:text-gold-400', 'font-bold');
+                    }
+                } else {
+                    section.classList.add('hidden');
+                    if (navBtn) {
+                        navBtn.classList.remove('bg-brand-500/10', 'text-brand-600', 'dark:text-gold-400', 'font-bold');
+                    }
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Dark mode toggler
+        function toggleDarkMode() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('theme-icon');
+            const iconMobile = document.getElementById('theme-icon-mobile');
+            if (isDark) {
+                if (icon) icon.className = 'fas fa-sun text-lg text-gold-400';
+                if (iconMobile) iconMobile.className = 'fas fa-sun text-base text-gold-400';
+            } else {
+                if (icon) icon.className = 'fas fa-moon text-lg';
+                if (iconMobile) iconMobile.className = 'fas fa-moon text-base';
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Portfolio filtering
+        function filterPortfolio(filter) {
+            const items = document.querySelectorAll('.port-item');
+            const btns = document.querySelectorAll('.port-filter-btn');
+
+            btns.forEach(btn => {
+                if (btn.getAttribute('data-filter') === filter) {
+                    btn.className = 'port-filter-btn bg-brand-600 text-white px-4 py-2 rounded-xl text-xs font-semibold transition';
+                } else {
+                    btn.className = 'port-filter-btn bg-white dark:bg-navy-900 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-800 transition hover:border-brand-500';
+                }
+            });
+
+            items.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Live Sermon Search Demo Functionality
+        function searchSermons() {
+            const query = document.getElementById('library-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.sermon-card');
+
+            cards.forEach(card => {
+                const text = (card.innerText + " " + card.getAttribute('data-tags')).toLowerCase();
+                if (text.includes(query)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Modals management
+        function openScheduleModal() {
+            document.getElementById('schedule-modal').classList.remove('hidden');
+            document.getElementById('schedule-modal').classList.add('flex');
+        }
+
+        function closeScheduleModal() {
+            document.getElementById('schedule-modal').classList.add('hidden');
+            document.getElementById('schedule-modal').classList.remove('flex');
+        }
+
+        function viewSermonModal(title, scripture, category, body) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-subtitle').innerText = `${category} • Scripture: ${scripture}`;
+            document.getElementById('modal-body').innerText = body;
+            document.getElementById('details-modal').classList.remove('hidden');
+            document.getElementById('details-modal').classList.add('flex');
+        }
+
+        function openCaseStudyModal() {
+            viewSermonModal(
+                'NEMI 120% Engagement Growth Case Study',
+                'Operational Metric',
+                'Digital Campaign Analytics',
+                'By introducing structured quarterly newsletter cycles, optimizing WordPress website performance, and developing searchable digital assets, platform engagement for the Nigeria Evangelical Missionary Institute increased by 120% in 9 months.'
+            );
+        }
+
+        function openTechBlueprintModal() {
+            viewSermonModal(
+                'vMix & Easyworship Multi-Camera Architecture',
+                'Technical Workflow',
+                'Livestream Operations',
+                'Integrated HDMI/NDI video feeds through vMix with Easyworship overlays for scripture and lyrics. Ensured zero-lag broadcast quality for online church attendees and remote prayer networks.'
+            );
+        }
+
+        function openInquiryModal(serviceName) {
+            switchTab('contact');
+            const select = document.querySelector('#contact-form select');
+            if (select) {
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].text.includes(serviceName)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        function closeDetailsModal() {
+            document.getElementById('details-modal').classList.add('hidden');
+            document.getElementById('details-modal').classList.remove('flex');
+        }
+
+        // Copy to clipboard helper
+        function copyToClipboard(text, btn) {
+            const temp = document.createElement('textarea');
+            temp.value = text;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check text-emerald-500"></i> <span class="text-emerald-500">Copied!</span>';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+            }, 2000);
+        }
+
+        // Form Submission Handlers
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const success = document.getElementById('form-success');
+            success.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                success.classList.add('hidden');
+            }, 5000);
+        }
+
+        function handleScheduleSubmit(event) {
+            event.preventDefault();
+            alert('Your 10-minute video slot request has been recorded. Ayomide will send an email confirmation shortly!');
+            closeScheduleModal();
+            event.target.reset();
+        }
+
+        // Initialize Home view on load
+        window.onload = function() {
+            switchTab('home');
+        };
+    </script>
+</body>
+</html>
