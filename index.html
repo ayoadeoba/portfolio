@@ -117,12 +117,14 @@
             <button onclick="switchTab('home'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</button>
             <button onclick="switchTab('portfolio'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Portfolio & Services</button>
             <button onclick="switchTab('contact'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</button>
-            <div class="pt-2">
-                <button onclick="openScheduleModal(); toggleMobileMenu();" class="w-full bg-gradient-to-r from-brand-600 to-gold-600 text-white text-center py-3 rounded-xl font-semibold shadow-md flex items-center justify-center gap-2">
-                    <i class="fa-regular fa-calendar-check"></i>
-                    <span>Schedule 10-Min Conversation</span>
-                </button>
-            </div>
+           <!-- ✅ FIXED MOBILE CODE -->
+<div class="pt-2">
+    <button onclick="switchTab('contact'); toggleMobileMenu();" class="w-full bg-gradient-to-r from-brand-600 to-gold-600 text-white text-center py-3 rounded-xl font-semibold shadow-md flex items-center justify-center gap-2">
+        <i class="fa-regular fa-calendar-check"></i>
+        <span>Schedule 10-Min Conversation</span>
+    </button>
+</div>
+
         </div>
     </header>
 
